@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=max-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+
+<div class="w3-sidebar w3-collapse w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+  <a href="Ajax.html" class="w3-bar-item w3-button">Ajax/geschiedenis</a>
+  <a href="ingeloggen.html" class="w3-bar-item w3-button">Maak je eigen club</a>
+  <a href="ingeloggen.html" class="w3-bar-item w3-button">Inloggen</a>
+ 
+ 
+</div>
+
+
+<div class="w3-highway-red">
+  <button class="w3-button w3-hide-large w3-highway-red w3-xlarge" onclick="w3_open()">☰</button>
+  <div class="w3-container">
+    <h1>Home</h1>
+  </div>
+</div>
+
+
+    <h1>Ajax</h1>
+    <p></p>
+  </div>
+</div>
+<img src="ajax opstelling 2018.jpg">
+ 
+<h1>Geschiedenis Ajax</h1>
+
+  Ajax werd opgericht op 18 maart 1900 in Amsterdam.In de jaren ’10 en ’20 groeide de club snel en behaalde zijn eerste successen. Eerste landstitel: 1918. Tweede landstitel: 1919. Hiermee werd Ajax de eerste club die twee seizoenen achter elkaar landskampioen werd. Ajax ontwikkelde een sterke jeugdopleiding en speelde aanvallend, technisch voetbal. De club won opnieuw meerdere titels, maar de echte bloeiperiode begon in de jaren ’60. In 1965 werd Rinus Michels trainer. Hij introduceerde het Totaalvoetbal, een revolutionaire speelstijl. Nu speelt Ajax dit jaar champions league en staan ze laatste.</p> 
+<div class="w3-container">
+
+<h2>Oud spelers</h2>
+<p>Er zijn veel spelers geweest die veel hebben betekent voor de club Ajax. In dit lijstje noem ik er een paar op en kun je meer informatie vinden over de spelers.</p>
+
+<button onclick="openKlappen('voetballer1')" class="w3-button w3-block w3-black w3-left-align">Johan cruijf</button>
+<div id="voetballer1" class="w3-hide w3-container">
+    <p>Johan Cruijff wordt gezien als één van de beste en meest invloedrijke voetballers aller tijden. Hij was speler, trainer én denker achter de beroemde Ajax- en Nederlandse voetbalstijl: Totaalvoetbal. Hij debuteerde op zijn 17de.</p>
+</div>
+
+<button onclick="openKlappen('voetballer2')" class="w3-button w3-block w3-black w3-left-align">Frank Rijkaard</button>
+<div id="voetballer2" class="w3-hide w3-container">
+    <p>Frank Rijkaard is een van de grootste Nederlandse voetballers ooit en een belangrijk icoon in de geschiedenis van Ajax. Hij was zowel als verdediger als controlerende middenvelder een speler van wereldformaat. Hij debuteerde op zijn 17de voor het Nederlandse elftal.</p>
+</div>
+<button onclick="openKlappen('voetballer3')" class="w3-button w3-block w3-black w3-left-align">Edwin van der Sar </button>
+<div id="voetballer3" class="w3-hide w3-container">
+    <p>Edwin van der Sar is een Nederlandse oud-keeper. Hij wordt gezien als één van de beste keepers die Nederland ooit heeft gehad. Na Ajax heeft hij bij Juventus, Fulham, Manchester united gespeeld. Hij won in 1995 met Ajax de championsleague.</p>
+</div>
+<button onclick="openKlappen('voetballer4')" class="w3-button w3-block w3-black w3-left-align">Johan neeskens</button>
+<div id="voetballer4" class="w3-hide w3-container">
+    <p>Johan Neeskens is een voormalige Nederlandse voetballer. Hij was een sterk, slim en heel hardwerkend middenvelder. Veel mensen vinden hem één van de beste middenvelders uit de Nederlandse voetbalgeschiedenis.In 1974 ging hij naar Barcelona. Hij heeft 49 wedstrijden voor Oranje gespeeld. Na zijn carrière werd hij trainer en assistent-trainer. Met Ajax won hij drie keer de Europacup.</p>
+</div>
+<button onclick="openKlappen('voetballer5')" class="w3-button w3-block w3-black w3-left-align">Marco van Basten</button>
+<div id="voetballer5" class="w3-hide w3-container">
+    <p>Marco van Basten is een beroemde Nederlandse oud-voetballer. Hij staat bekend als één van de beste spitsen ooit in de wereld. Van Basten begon zijn carrière bij Ajax. Na Ajax heeft hij bij AC Milan gespeeld. Ook heeft hij 58 wedstrijden voor Oranje. Hij won in 1988 het EK. Ook werd hij trainer bij Ajax, Nederlands elftal, Heerenveen en AZ.</p>
+</div>
+<h3>Prijzen</h3>
+<ul class="w3-ul w3-large">
+  <li>Champions League / Europacup I – 4 keer gewonnen.</li>
+  <li>Europa League / UEFA Cup – 1 keer gewonnen.</li>
+  <li>Europese Beker voor Bekerwinnaars – 1 keer gewonnen.</li>
+  <li>UEFA Supercup – meerdere keren gewonnen.</li>
+  <li>Wereldbeker voor clubteams (Intercontinental Cup) – 2 keer gewonnen.</li>
+  <li>
+  </ul>
+
+
+
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+<script>
+function openKlappen(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace("w3-highway-red", "w3-white");
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace("w3-highway-red", "w3-white");
+  }
+}
+</script>
+          
+</body>
+</html>
