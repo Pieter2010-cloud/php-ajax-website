@@ -32,7 +32,7 @@
 
 <div class="w3-content w3-display-container" style="max-width:800px; margin-top:20px;">
 
-  <img class="mySlides" src="juigend ajax.jpg" style="width:100%">
+  <img class="mySlides" src="juigend_ajax.jpg" style="width:100%">
   <img class="mySlides" src="spelers ajax.jpg" style="width:100%">
   <img class="mySlides" src="ajax juigt.jpg" style="width:100%">
 
