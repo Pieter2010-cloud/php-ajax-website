@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS ajax;
-USE ajax;
+CREATE DATABASE IF NOT EXISTS oefenen;
+USE oefenen;
  
 CREATE TABLE IF NOT EXISTS accounts (
   username varchar(50)  NOT NULL PRIMARY KEY,
