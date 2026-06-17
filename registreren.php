@@ -28,22 +28,22 @@ if ( isset($_GET["naam"]) && isset($_GET["gebruikersnaam"]) && isset($_GET["wach
   <form class="w3-container" action="ingeloggen.php">
     <p>      
     <label class="w3-highway-text-red"><b>Voornaam</b></label>
-    <input class="w3-input w3-border w3-white" name="first" type="text"></p>
+    <input class="w3-input w3-border w3-white" name="Voornaam" type="text"></p>
     <p>      
     <label class="w3-text-highway-red"><b>Achternaam</b></label>
-    <input class="w3-input w3-border w3-white" name="last" type="text"></p>
+    <input class="w3-input w3-border w3-white" name="Achternaam" type="text"></p>
 	<p>      
     <label class="w3-text-highway-red"><b>Gebruikersnaam</b></label>
-    <input class="w3-input w3-border w3-white" name="first" type="text"></p>
+    <input class="w3-input w3-border w3-white" name="Gebruikersnaam" type="text"></p>
 	<p>      
     <label class="w3-text-highway-red"><b>Wachtwoord</b></label>
-    <input class="w3-input w3-border w3-white" name="first" type="Password"></p>
+    <input class="w3-input w3-border w3-white" name="Wachtwoord" type="Password"></p>
 	<p>      
     <label class="w3-text-highway-red"><b>Wachtwoord herhalen</b></label>
-    <input class="w3-input w3-border w3-white" name="first" type="Password"></p>
+    <input class="w3-input w3-border w3-white" name="Wachtwoord-herhalen" type="Password"></p>
 	<p>      
     <label class="w3-text-highway-red"><b>E-mail</b></label>
-    <input class="w3-input w3-border w3-white" name="first" type="text"></p>
+    <input class="w3-input w3-border w3-white" name="E-mail" type="text"></p>
 	<p>
     <a href="ingeloggen.php" class="w3-button w3-black">registreren</a>
   </form>
