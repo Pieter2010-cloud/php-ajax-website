@@ -12,9 +12,9 @@
 <!-- Sidebar -->
 <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
   <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-  <a href="Ajax.html" class="w3-bar-item w3-button">Ajax/geschiedenis</a>
-  <a href="maak je eigen club.html" class="w3-bar-item w3-button">Maak je eigen club</a>
-  <a href="Index.html" class="w3-bar-item w3-button">Uitloggen</a>
+  <a href="Ajax.php" class="w3-bar-item w3-button">Ajax/geschiedenis</a>
+  <a href="maak je eigen club.php" class="w3-bar-item w3-button">Maak je eigen club</a>
+  <a href="Index.php" class="w3-bar-item w3-button">Uitloggen</a>
  
  
 </div>

@@ -25,7 +25,7 @@ if ( isset($_GET["naam"]) && isset($_GET["gebruikersnaam"]) && isset($_GET["wach
   <div class="w3-container w3-highway-red">
     <h2>Account aanmaken</h2>
   </div>
-  <form class="w3-container" action="ingeloggen.html">
+  <form class="w3-container" action="ingeloggen.php">
     <p>      
     <label class="w3-highway-text-red"><b>Voornaam</b></label>
     <input class="w3-input w3-border w3-white" name="first" type="text"></p>
@@ -45,7 +45,7 @@ if ( isset($_GET["naam"]) && isset($_GET["gebruikersnaam"]) && isset($_GET["wach
     <label class="w3-text-highway-red"><b>E-mail</b></label>
     <input class="w3-input w3-border w3-white" name="first" type="text"></p>
 	<p>
-    <a href="ingeloggen.html" class="w3-button w3-black">registreren</a>
+    <a href="ingeloggen.php" class="w3-button w3-black">registreren</a>
   </form>
 </div>
 

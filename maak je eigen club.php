@@ -34,9 +34,9 @@ text-align: left;
 
 <div class="w3-sidebar w3-hide-large w3-bar-block w3-border-right" style="display:none" id="mySidebar">
 <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-<a href="Index.html" class="w3-bar-item w3-button">Home</a>
-<a href="Ajax.html" class="w3-bar-item w3-button">Ajax/geschiedenis</a>
-<a href="Index.html" class="w3-bar-item w3-button">uitloggen</a>
+<a href="Index.php" class="w3-bar-item w3-button">Home</a>
+<a href="Ajax.php" class="w3-bar-item w3-button">Ajax/geschiedenis</a>
+<a href="Index.php" class="w3-bar-item w3-button">uitloggen</a>
 </div>
 
 <div class="w3-row-padding" style="margin-top:20px;">
