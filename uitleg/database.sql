@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS accounts (
   email    varchar(100) NOT NULL UNIQUE
 );
  
-CREATE TABLE IF NOT EXISTS scores (
+CREATE TABLE IF NOT EXISTS opstelling (
   username varchar(20) NOT NULL PRIMARY KEY,
   score    int         NOT NULL,
 

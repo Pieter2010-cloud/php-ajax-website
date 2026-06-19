@@ -1,15 +1,16 @@
 <?php
 
-if ( isset($_GET["naam"]) && isset($_GET["gebruikersnaam"]) && isset($_GET["wachtwoord"]) && isset($_GET["wachtwoord_herhaald"]) && isset($_GET["email"]) ) {
-	$opgestuurde_naam = $_GET["naam"];
+if ( isset($_GET["Voornaam"]) && isset($_GET["Achternaam"]) && isset($_GET["gebruikersnaam"]) && isset($_GET["wachtwoord"]) && isset($_GET["wachtwoord_herhaald"]) && isset($_GET["email"]) ) {
+	$opgestuurde_Voornaam = $_GET["Voornaam"];
+	$opgestuurde_Achternaam = $_GET["Achternaam"];
 	$opgestuurde_gebruikersnaam = $_GET["gebruikersnaam"];
 	$opgestuurde_wachtwoord = $_GET["wachtwoord"];
 	$opgestuurde_wachtwoord_herhaald = $_GET["wachtwoord_herhaald"];
 	$opgestuurde_email = $_GET["email"];
 
-	$bericht = "leuk dat je je registreert. Helaas werkt het nog niet op dit moment, maar dit is wat je opgestuurd hebt: Naam = $opgestuurde_naam, gebruikersnaam = $opgestuurde_gebruikersnaam";
+	$bericht = "Hoi $opgestuurde_Voornaam, leuk dat je je registreert. Helaas werkt het nog niet op dit moment, maar dit is wat je opgestuurd hebt: Naam = $opgestuurde_naam, gebruikersnaam = $opgestuurde_gebruikersnaam";
 } else {
-	$bericht = "hoe heet je?";
+	$bericht = "Hallo, hoe heet je?";
 }
 
 ?><!DOCTYPE html>
@@ -25,7 +26,7 @@ if ( isset($_GET["naam"]) && isset($_GET["gebruikersnaam"]) && isset($_GET["wach
   <div class="w3-container w3-highway-red">
     <h2>Account aanmaken</h2>
   </div>
-  <form class="w3-container" action="ingeloggen.php">
+  <form class="w3-container">
     <p>      
     <label class="w3-highway-text-red"><b>Voornaam</b></label>
     <input class="w3-input w3-border w3-white" name="Voornaam" type="text"></p>
@@ -45,7 +46,7 @@ if ( isset($_GET["naam"]) && isset($_GET["gebruikersnaam"]) && isset($_GET["wach
     <label class="w3-text-highway-red"><b>E-mail</b></label>
     <input class="w3-input w3-border w3-white" name="E-mail" type="text"></p>
 	<p>
-    <a href="ingeloggen.php" class="w3-button w3-black">registreren</a>
+    <input type="submit" class="w3-button w3-black" value="registreren">
   </form>
 </div>
 
