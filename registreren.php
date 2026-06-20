@@ -1,19 +1,36 @@
 <?php
+include "dbconn.php";
 
-if ( isset($_GET["Voornaam"]) && isset($_GET["Achternaam"]) && isset($_GET["gebruikersnaam"]) && isset($_GET["wachtwoord"]) && isset($_GET["wachtwoord_herhaald"]) && isset($_GET["email"]) ) {
-	$opgestuurde_Voornaam = $_GET["Voornaam"];
-	$opgestuurde_Achternaam = $_GET["Achternaam"];
-	$opgestuurde_gebruikersnaam = $_GET["gebruikersnaam"];
-	$opgestuurde_wachtwoord = $_GET["wachtwoord"];
-	$opgestuurde_wachtwoord_herhaald = $_GET["wachtwoord_herhaald"];
-	$opgestuurde_email = $_GET["email"];
+$bericht = "Vul het formulier in";
 
-	$bericht = "Hoi $opgestuurde_Voornaam, leuk dat je je registreert. Helaas werkt het nog niet op dit moment, maar dit is wat je opgestuurd hebt: Naam = $opgestuurde_naam, gebruikersnaam = $opgestuurde_gebruikersnaam";
-} else {
-	$bericht = "Hallo, hoe heet je?";
+if (
+    isset($_GET["Voornaam"]) &&
+    isset($_GET["Achternaam"]) &&
+    isset($_GET["Gebruikersnaam"]) &&
+    isset($_GET["Wachtwoord"]) &&
+    isset($_GET["E-mail"])
+) {
+
+    $voornaam = $_GET["Voornaam"];
+    $achternaam = $_GET["Achternaam"];
+    $username = $_GET["Gebruikersnaam"];
+    $wachtwoord = $_GET["Wachtwoord"];
+    $email = $_GET["E-mail"];
+
+    $naam = $voornaam . " " . $achternaam;
+
+    $query = "INSERT INTO accounts (username, password, name, email)
+              VALUES ('$username', '$wachtwoord', '$naam', '$email')";
+
+    if (mysqli_query($con, $query)) {
+        $bericht = "Account is succesvol aangemaakt.";
+    } else {
+        $bericht = "Account kon niet worden gemaakt omdat de gebruikersnaam of het e-mailadres al door een ander account in gebruik is.";
+    }
 }
+?>
 
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,29 +43,39 @@ if ( isset($_GET["Voornaam"]) && isset($_GET["Achternaam"]) && isset($_GET["gebr
   <div class="w3-container w3-highway-red">
     <h2>Account aanmaken</h2>
   </div>
-  <form class="w3-container">
-    <p>      
-    <label class="w3-highway-text-red"><b>Voornaam</b></label>
-    <input class="w3-input w3-border w3-white" name="Voornaam" type="text"></p>
-    <p>      
-    <label class="w3-text-highway-red"><b>Achternaam</b></label>
-    <input class="w3-input w3-border w3-white" name="Achternaam" type="text"></p>
-	<p>      
-    <label class="w3-text-highway-red"><b>Gebruikersnaam</b></label>
-    <input class="w3-input w3-border w3-white" name="Gebruikersnaam" type="text"></p>
-	<p>      
-    <label class="w3-text-highway-red"><b>Wachtwoord</b></label>
-    <input class="w3-input w3-border w3-white" name="Wachtwoord" type="Password"></p>
-	<p>      
-    <label class="w3-text-highway-red"><b>Wachtwoord herhalen</b></label>
-    <input class="w3-input w3-border w3-white" name="Wachtwoord-herhalen" type="Password"></p>
-	<p>      
-    <label class="w3-text-highway-red"><b>E-mail</b></label>
-    <input class="w3-input w3-border w3-white" name="E-mail" type="text"></p>
-	<p>
+
+  <form class="w3-container" method="get">
+
+    <p>
+    <label>Voornaam</label>
+    <input type="text" name="Voornaam"></p>
+
+    <p>
+    <label>Achternaam</label>
+    <input type="text" name="Achternaam"></p>
+
+    <p>
+    <label>Gebruikersnaam</label>
+    <input type="text" name="Gebruikersnaam"></p>
+
+    <p>
+    <label>Wachtwoord</label>
+    <input type="password" name="Wachtwoord"></p>
+
+    <p>
+    <label>Wachtwoord herhalen</label>
+    <input type="password" name="Wachtwoord-herhalen"></p>
+
+    <p>
+    <label>E-mail</label>
+    <input type="text" name="E-mail"></p>
+
     <input type="submit" class="w3-button w3-black" value="registreren">
   </form>
+
+  <p><?php echo $bericht; ?></p>
+
 </div>
 
 </body>
-</html> 
+</html>
